@@ -1,0 +1,46 @@
+﻿Information:
+
+The code is written with Visual Studio 2022.
+1. The project uses .NET 6.0 (please make sure you installed it to be able to run the project)
+2. It used NUnit with the Unit test.
+
+How to run:
+Install Visual Studio and the .NET 6.0.
+
+
+How to test:
+The program will show 'Please input instruction, type 'exit' to end:', please input any commands. The program will response and allow you to continue input the new command.
+If you want to exit, please type 'exit'.
+
+
+Some test case:
+- Invalid command:
+XXX
+PLACE
+PLACE a,a
+PLACE 5,5,X
+
+- Valid Place command: PLACE + x,y,f (0<=x <= 4 && 0 <= y && <=4, f in(NORTH, EAST,WEST, SOUTH - Ignore case))
+PLACE 0,0,NORTH
+MOVE
+REPORT => 0,1,NORTH
+MOVE 
+RIGHT
+REPORT => 0,2,EAST
+LEFT
+REPORT => 0,2,NORTH
+MOVE
+MOVE
+MOVE => Robot cannot execute the command - out of table.
+LEFT => 0,4,WEST
+MOVE => Robot cannot execute the command - out of table.
+exit
+
+
+
+
+* Because the limitation of time, there are some points could be improve in real project:
+
+- Move some class/Constants/Service/Interface/Model to another projects
+- Put the comment more acurate and for all property.
+
